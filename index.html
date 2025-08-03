@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Awesome Website!</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>vandana</h1>
-    <h1>assignment</h1>
+  <div class="container">
+    <h1>Hello, Friends! 👋</h1>
+    <p>Welcome to the coolest simple website ever.</p>
+
+    <button id="magicBtn">Click me for a surprise!</button>
+
+    <div id="surprise" class="hidden">
+      <h2>🎉 Surprise! 🎉</h2>
+      <p>You just unlocked some cool magic ✨</p>
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById('magicBtn');
+    const surprise = document.getElementById('surprise');
+
+    btn.addEventListener('click', () => {
+      surprise.classList.toggle('hidden');
+      btn.textContent = surprise.classList.contains('hidden') ? "Click me for a surprise!" : "Hide the surprise";
+    });
+  </script>
 </body>
 </html>
